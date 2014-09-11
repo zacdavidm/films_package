@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Films Package feature.
+ */
+
+include_once 'films_package.features.inc';
