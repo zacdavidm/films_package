@@ -40,7 +40,7 @@ function films_package_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'taxonomy_autocomplete',
-      'weight' => 2,
+      'weight' => 0,
     ),
   );
 
@@ -87,7 +87,55 @@ function films_package_field_default_field_instances() {
         'year_range' => '-3:+3',
       ),
       'type' => 'date_popup',
-      'weight' => 0,
+      'weight' => 1,
+    ),
+  );
+
+  // Exported field_instance: 'field_collection_item-field_film_showtimes-field_ticket_link'
+  $field_instances['field_collection_item-field_film_showtimes-field_ticket_link'] = array(
+    'bundle' => 'field_film_showtimes',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'link',
+        'settings' => array(),
+        'type' => 'link_default',
+        'weight' => 3,
+      ),
+    ),
+    'entity_type' => 'field_collection_item',
+    'field_name' => 'field_ticket_link',
+    'label' => 'Ticket Link',
+    'required' => 0,
+    'settings' => array(
+      'attributes' => array(
+        'class' => '',
+        'configurable_title' => 0,
+        'rel' => '',
+        'target' => '_blank',
+        'title' => '',
+      ),
+      'display' => array(
+        'url_cutoff' => 80,
+      ),
+      'enable_tokens' => 1,
+      'rel_remove' => 'default',
+      'title' => 'none',
+      'title_maxlength' => 128,
+      'title_value' => '',
+      'url' => 'optional',
+      'user_register_form' => FALSE,
+      'validate_url' => 1,
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'link',
+      'settings' => array(),
+      'type' => 'link_field',
+      'weight' => 2,
     ),
   );
 
@@ -200,8 +248,8 @@ function films_package_field_default_field_instances() {
       'file_directory' => 'films',
       'file_extensions' => 'png gif jpg jpeg',
       'max_filesize' => '120 KB',
-      'max_resolution' => '970x485',
-      'min_resolution' => '970x485',
+      'max_resolution' => '1000x500',
+      'min_resolution' => '1000x500',
       'title_field' => 0,
       'user_register_form' => FALSE,
     ),
@@ -682,6 +730,7 @@ function films_package_field_default_field_instances() {
   t('Showtime');
   t('Summary');
   t('Tags');
+  t('Ticket Link');
   t('Trailer Url');
 
   return $field_instances;

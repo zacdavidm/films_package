@@ -118,147 +118,6 @@ function films_package_views_default_views() {
   $export['coming_soon'] = $view;
 
   $view = new view();
-  $view->name = 'featured';
-  $view->description = '';
-  $view->tag = 'default';
-  $view->base_table = 'node';
-  $view->human_name = 'Featured';
-  $view->core = 7;
-  $view->api_version = '3.0';
-  $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
-
-  /* Display: Master */
-  $handler = $view->new_display('default', 'Master', 'default');
-  $handler->display->display_options['title'] = 'Featured';
-  $handler->display->display_options['use_more_always'] = FALSE;
-  $handler->display->display_options['access']['type'] = 'perm';
-  $handler->display->display_options['cache']['type'] = 'none';
-  $handler->display->display_options['query']['type'] = 'views_query';
-  $handler->display->display_options['exposed_form']['type'] = 'basic';
-  $handler->display->display_options['pager']['type'] = 'full';
-  $handler->display->display_options['pager']['options']['items_per_page'] = '10';
-  $handler->display->display_options['style_plugin'] = 'default';
-  $handler->display->display_options['row_plugin'] = 'fields';
-  /* Field: Field: Image */
-  $handler->display->display_options['fields']['field_image']['id'] = 'field_image';
-  $handler->display->display_options['fields']['field_image']['table'] = 'field_data_field_image';
-  $handler->display->display_options['fields']['field_image']['field'] = 'field_image';
-  $handler->display->display_options['fields']['field_image']['label'] = '';
-  $handler->display->display_options['fields']['field_image']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_image']['click_sort_column'] = 'fid';
-  $handler->display->display_options['fields']['field_image']['settings'] = array(
-    'image_style' => '',
-    'image_link' => 'content',
-  );
-  /* Field: Content: Type */
-  $handler->display->display_options['fields']['type']['id'] = 'type';
-  $handler->display->display_options['fields']['type']['table'] = 'node';
-  $handler->display->display_options['fields']['type']['field'] = 'type';
-  $handler->display->display_options['fields']['type']['label'] = '';
-  $handler->display->display_options['fields']['type']['element_label_colon'] = FALSE;
-  /* Field: Content: Title */
-  $handler->display->display_options['fields']['title']['id'] = 'title';
-  $handler->display->display_options['fields']['title']['table'] = 'node';
-  $handler->display->display_options['fields']['title']['field'] = 'title';
-  $handler->display->display_options['fields']['title']['label'] = '';
-  $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
-  $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
-  $handler->display->display_options['fields']['title']['element_type'] = 'h2';
-  $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
-  /* Field: Content: Run Date */
-  $handler->display->display_options['fields']['field_run_date']['id'] = 'field_run_date';
-  $handler->display->display_options['fields']['field_run_date']['table'] = 'field_data_field_run_date';
-  $handler->display->display_options['fields']['field_run_date']['field'] = 'field_run_date';
-  $handler->display->display_options['fields']['field_run_date']['label'] = '';
-  $handler->display->display_options['fields']['field_run_date']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_run_date']['settings'] = array(
-    'format_type' => 'month_day',
-    'fromto' => 'both',
-    'multiple_number' => '',
-    'multiple_from' => '',
-    'multiple_to' => '',
-  );
-  /* Field: Content: Summary */
-  $handler->display->display_options['fields']['field_summary']['id'] = 'field_summary';
-  $handler->display->display_options['fields']['field_summary']['table'] = 'field_data_field_summary';
-  $handler->display->display_options['fields']['field_summary']['field'] = 'field_summary';
-  $handler->display->display_options['fields']['field_summary']['label'] = '';
-  $handler->display->display_options['fields']['field_summary']['element_label_colon'] = FALSE;
-  /* Field: Content: Trailer Url */
-  $handler->display->display_options['fields']['field_trailer_url']['id'] = 'field_trailer_url';
-  $handler->display->display_options['fields']['field_trailer_url']['table'] = 'field_data_field_trailer_url';
-  $handler->display->display_options['fields']['field_trailer_url']['field'] = 'field_trailer_url';
-  $handler->display->display_options['fields']['field_trailer_url']['label'] = '';
-  $handler->display->display_options['fields']['field_trailer_url']['element_type'] = '0';
-  $handler->display->display_options['fields']['field_trailer_url']['element_label_type'] = '0';
-  $handler->display->display_options['fields']['field_trailer_url']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_trailer_url']['element_wrapper_type'] = '0';
-  $handler->display->display_options['fields']['field_trailer_url']['type'] = 'text_plain';
-  /* Field: Content: Path */
-  $handler->display->display_options['fields']['path']['id'] = 'path';
-  $handler->display->display_options['fields']['path']['table'] = 'node';
-  $handler->display->display_options['fields']['path']['field'] = 'path';
-  $handler->display->display_options['fields']['path']['label'] = '';
-  $handler->display->display_options['fields']['path']['element_type'] = '0';
-  $handler->display->display_options['fields']['path']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['path']['element_wrapper_type'] = '0';
-  $handler->display->display_options['fields']['path']['element_default_classes'] = FALSE;
-  /* Sort criterion: Content: Post date */
-  $handler->display->display_options['sorts']['created']['id'] = 'created';
-  $handler->display->display_options['sorts']['created']['table'] = 'node';
-  $handler->display->display_options['sorts']['created']['field'] = 'created';
-  $handler->display->display_options['sorts']['created']['order'] = 'DESC';
-  /* Filter criterion: Content: Published */
-  $handler->display->display_options['filters']['status']['id'] = 'status';
-  $handler->display->display_options['filters']['status']['table'] = 'node';
-  $handler->display->display_options['filters']['status']['field'] = 'status';
-  $handler->display->display_options['filters']['status']['value'] = 1;
-  $handler->display->display_options['filters']['status']['group'] = 1;
-  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
-  /* Filter criterion: Content: Type */
-  $handler->display->display_options['filters']['type']['id'] = 'type';
-  $handler->display->display_options['filters']['type']['table'] = 'node';
-  $handler->display->display_options['filters']['type']['field'] = 'type';
-  $handler->display->display_options['filters']['type']['value'] = array(
-    'event' => 'event',
-    'film' => 'film',
-    'film_series' => 'film_series',
-  );
-  /* Filter criterion: Content: Promoted to front page */
-  $handler->display->display_options['filters']['promote']['id'] = 'promote';
-  $handler->display->display_options['filters']['promote']['table'] = 'node';
-  $handler->display->display_options['filters']['promote']['field'] = 'promote';
-  $handler->display->display_options['filters']['promote']['value'] = '1';
-
-  /* Display: Page */
-  $handler = $view->new_display('page', 'Page', 'page');
-  $handler->display->display_options['path'] = 'featured';
-
-  /* Display: Block */
-  $handler = $view->new_display('block', 'Block', 'block');
-  $handler->display->display_options['defaults']['use_more'] = FALSE;
-  $handler->display->display_options['defaults']['use_more_always'] = FALSE;
-  $handler->display->display_options['defaults']['use_more_always'] = FALSE;
-  $handler->display->display_options['use_more_always'] = TRUE;
-  $handler->display->display_options['defaults']['use_more_text'] = FALSE;
-  $handler->display->display_options['use_more_text'] = 'More Featured';
-  $handler->display->display_options['defaults']['pager'] = FALSE;
-  $handler->display->display_options['pager']['type'] = 'some';
-  $handler->display->display_options['pager']['options']['items_per_page'] = '1';
-  $handler->display->display_options['pager']['options']['offset'] = '0';
-
-  /* Display: Page */
-  $handler = $view->new_display('page', 'Page', 'page_1');
-  $handler->display->display_options['defaults']['title'] = FALSE;
-  $handler->display->display_options['title'] = 'Home';
-  $handler->display->display_options['defaults']['pager'] = FALSE;
-  $handler->display->display_options['pager']['type'] = 'some';
-  $handler->display->display_options['pager']['options']['items_per_page'] = '1';
-  $handler->display->display_options['pager']['options']['offset'] = '0';
-  $handler->display->display_options['path'] = 'home';
-  $export['featured'] = $view;
-
-  $view = new view();
   $view->name = 'film_series';
   $view->description = '';
   $view->tag = 'default';
@@ -552,6 +411,16 @@ function films_package_views_default_views() {
   $handler->display->display_options['fields']['title']['label'] = '';
   $handler->display->display_options['fields']['title']['exclude'] = TRUE;
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
+  /* Field: Field collection item: Ticket Link */
+  $handler->display->display_options['fields']['field_ticket_link']['id'] = 'field_ticket_link';
+  $handler->display->display_options['fields']['field_ticket_link']['table'] = 'field_data_field_ticket_link';
+  $handler->display->display_options['fields']['field_ticket_link']['field'] = 'field_ticket_link';
+  $handler->display->display_options['fields']['field_ticket_link']['relationship'] = 'field_film_showtimes_value';
+  $handler->display->display_options['fields']['field_ticket_link']['label'] = '';
+  $handler->display->display_options['fields']['field_ticket_link']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_ticket_link']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_ticket_link']['click_sort_column'] = 'url';
+  $handler->display->display_options['fields']['field_ticket_link']['type'] = 'link_absolute';
   /* Field: Time */
   $handler->display->display_options['fields']['field_showtime_1']['id'] = 'field_showtime_1';
   $handler->display->display_options['fields']['field_showtime_1']['table'] = 'field_data_field_showtime';
@@ -560,6 +429,8 @@ function films_package_views_default_views() {
   $handler->display->display_options['fields']['field_showtime_1']['ui_name'] = 'Time';
   $handler->display->display_options['fields']['field_showtime_1']['label'] = '';
   $handler->display->display_options['fields']['field_showtime_1']['alter']['text'] = '[field_showtime_1-value]';
+  $handler->display->display_options['fields']['field_showtime_1']['alter']['make_link'] = TRUE;
+  $handler->display->display_options['fields']['field_showtime_1']['alter']['path'] = '[field_ticket_link]';
   $handler->display->display_options['fields']['field_showtime_1']['alter']['strip_tags'] = TRUE;
   $handler->display->display_options['fields']['field_showtime_1']['element_type'] = '0';
   $handler->display->display_options['fields']['field_showtime_1']['element_label_colon'] = FALSE;
@@ -690,12 +561,12 @@ function films_package_views_default_views() {
   $handler->display->display_options['fields']['field_location']['element_type'] = 'h3';
   $handler->display->display_options['fields']['field_location']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_location']['type'] = 'taxonomy_term_reference_plain';
-  /* Field: Day */
+  /* Field: Date */
   $handler->display->display_options['fields']['field_showtime']['id'] = 'field_showtime';
   $handler->display->display_options['fields']['field_showtime']['table'] = 'field_data_field_showtime';
   $handler->display->display_options['fields']['field_showtime']['field'] = 'field_showtime';
   $handler->display->display_options['fields']['field_showtime']['relationship'] = 'field_film_showtimes_value';
-  $handler->display->display_options['fields']['field_showtime']['ui_name'] = 'Day';
+  $handler->display->display_options['fields']['field_showtime']['ui_name'] = 'Date';
   $handler->display->display_options['fields']['field_showtime']['label'] = '';
   $handler->display->display_options['fields']['field_showtime']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_showtime']['element_label_colon'] = FALSE;
@@ -706,25 +577,23 @@ function films_package_views_default_views() {
     'multiple_from' => '',
     'multiple_to' => '',
   );
-  /* Field: Weekday */
-  $handler->display->display_options['fields']['field_showtime_2']['id'] = 'field_showtime_2';
-  $handler->display->display_options['fields']['field_showtime_2']['table'] = 'field_data_field_showtime';
-  $handler->display->display_options['fields']['field_showtime_2']['field'] = 'field_showtime';
-  $handler->display->display_options['fields']['field_showtime_2']['relationship'] = 'field_film_showtimes_value';
-  $handler->display->display_options['fields']['field_showtime_2']['ui_name'] = 'Weekday';
-  $handler->display->display_options['fields']['field_showtime_2']['label'] = '';
-  $handler->display->display_options['fields']['field_showtime_2']['exclude'] = TRUE;
-  $handler->display->display_options['fields']['field_showtime_2']['element_type'] = '0';
-  $handler->display->display_options['fields']['field_showtime_2']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_showtime_2']['element_wrapper_type'] = '0';
-  $handler->display->display_options['fields']['field_showtime_2']['element_default_classes'] = FALSE;
-  $handler->display->display_options['fields']['field_showtime_2']['settings'] = array(
-    'format_type' => 'short_weekday',
-    'fromto' => 'both',
-    'multiple_number' => '',
-    'multiple_from' => '',
-    'multiple_to' => '',
-  );
+  /* Field: Content: Title */
+  $handler->display->display_options['fields']['title']['id'] = 'title';
+  $handler->display->display_options['fields']['title']['table'] = 'node';
+  $handler->display->display_options['fields']['title']['field'] = 'title';
+  $handler->display->display_options['fields']['title']['label'] = '';
+  $handler->display->display_options['fields']['title']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
+  /* Field: Field collection item: Ticket Link */
+  $handler->display->display_options['fields']['field_ticket_link']['id'] = 'field_ticket_link';
+  $handler->display->display_options['fields']['field_ticket_link']['table'] = 'field_data_field_ticket_link';
+  $handler->display->display_options['fields']['field_ticket_link']['field'] = 'field_ticket_link';
+  $handler->display->display_options['fields']['field_ticket_link']['relationship'] = 'field_film_showtimes_value';
+  $handler->display->display_options['fields']['field_ticket_link']['label'] = '';
+  $handler->display->display_options['fields']['field_ticket_link']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_ticket_link']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_ticket_link']['click_sort_column'] = 'url';
+  $handler->display->display_options['fields']['field_ticket_link']['type'] = 'link_absolute';
   /* Field: Time */
   $handler->display->display_options['fields']['field_showtime_1']['id'] = 'field_showtime_1';
   $handler->display->display_options['fields']['field_showtime_1']['table'] = 'field_data_field_showtime';
@@ -733,6 +602,8 @@ function films_package_views_default_views() {
   $handler->display->display_options['fields']['field_showtime_1']['ui_name'] = 'Time';
   $handler->display->display_options['fields']['field_showtime_1']['label'] = '';
   $handler->display->display_options['fields']['field_showtime_1']['alter']['text'] = '[field_showtime_1-value]';
+  $handler->display->display_options['fields']['field_showtime_1']['alter']['make_link'] = TRUE;
+  $handler->display->display_options['fields']['field_showtime_1']['alter']['path'] = '[field_ticket_link]';
   $handler->display->display_options['fields']['field_showtime_1']['alter']['strip_tags'] = TRUE;
   $handler->display->display_options['fields']['field_showtime_1']['element_type'] = '0';
   $handler->display->display_options['fields']['field_showtime_1']['element_label_colon'] = FALSE;
@@ -860,12 +731,12 @@ function films_package_views_default_views() {
   $handler->display->display_options['fields']['field_location']['element_type'] = 'h3';
   $handler->display->display_options['fields']['field_location']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_location']['type'] = 'taxonomy_term_reference_plain';
-  /* Field: Date */
+  /* Field: Month/Day */
   $handler->display->display_options['fields']['field_showtime']['id'] = 'field_showtime';
   $handler->display->display_options['fields']['field_showtime']['table'] = 'field_data_field_showtime';
   $handler->display->display_options['fields']['field_showtime']['field'] = 'field_showtime';
   $handler->display->display_options['fields']['field_showtime']['relationship'] = 'field_film_showtimes_value';
-  $handler->display->display_options['fields']['field_showtime']['ui_name'] = 'Date';
+  $handler->display->display_options['fields']['field_showtime']['ui_name'] = 'Month/Day';
   $handler->display->display_options['fields']['field_showtime']['label'] = '';
   $handler->display->display_options['fields']['field_showtime']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_showtime']['settings'] = array(
@@ -881,6 +752,16 @@ function films_package_views_default_views() {
   $handler->display->display_options['fields']['title']['field'] = 'title';
   $handler->display->display_options['fields']['title']['label'] = '';
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
+  /* Field: Field collection item: Ticket Link */
+  $handler->display->display_options['fields']['field_ticket_link']['id'] = 'field_ticket_link';
+  $handler->display->display_options['fields']['field_ticket_link']['table'] = 'field_data_field_ticket_link';
+  $handler->display->display_options['fields']['field_ticket_link']['field'] = 'field_ticket_link';
+  $handler->display->display_options['fields']['field_ticket_link']['relationship'] = 'field_film_showtimes_value';
+  $handler->display->display_options['fields']['field_ticket_link']['label'] = '';
+  $handler->display->display_options['fields']['field_ticket_link']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_ticket_link']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_ticket_link']['click_sort_column'] = 'url';
+  $handler->display->display_options['fields']['field_ticket_link']['type'] = 'link_absolute';
   /* Field: Time */
   $handler->display->display_options['fields']['field_showtime_1']['id'] = 'field_showtime_1';
   $handler->display->display_options['fields']['field_showtime_1']['table'] = 'field_data_field_showtime';
@@ -889,6 +770,8 @@ function films_package_views_default_views() {
   $handler->display->display_options['fields']['field_showtime_1']['ui_name'] = 'Time';
   $handler->display->display_options['fields']['field_showtime_1']['label'] = '';
   $handler->display->display_options['fields']['field_showtime_1']['alter']['text'] = '[field_showtime_1-value]';
+  $handler->display->display_options['fields']['field_showtime_1']['alter']['make_link'] = TRUE;
+  $handler->display->display_options['fields']['field_showtime_1']['alter']['path'] = '[field_ticket_link]';
   $handler->display->display_options['fields']['field_showtime_1']['alter']['strip_tags'] = TRUE;
   $handler->display->display_options['fields']['field_showtime_1']['element_type'] = '0';
   $handler->display->display_options['fields']['field_showtime_1']['element_label_colon'] = FALSE;
