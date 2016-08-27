@@ -10,7 +10,8 @@
 function films_package_field_default_field_instances() {
   $field_instances = array();
 
-  // Exported field_instance: 'field_collection_item-field_film_showtimes-field_location'
+  // Exported field_instance:
+  // 'field_collection_item-field_film_showtimes-field_location'.
   $field_instances['field_collection_item-field_film_showtimes-field_location'] = array(
     'bundle' => 'field_film_showtimes',
     'default_value' => NULL,
@@ -44,7 +45,8 @@ function films_package_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'field_collection_item-field_film_showtimes-field_showtime'
+  // Exported field_instance:
+  // 'field_collection_item-field_film_showtimes-field_showtime'.
   $field_instances['field_collection_item-field_film_showtimes-field_showtime'] = array(
     'bundle' => 'field_film_showtimes',
     'deleted' => 0,
@@ -59,6 +61,7 @@ function films_package_field_default_field_instances() {
           'multiple_from' => '',
           'multiple_number' => '',
           'multiple_to' => '',
+          'show_remaining_days' => FALSE,
         ),
         'type' => 'date_default',
         'weight' => 0,
@@ -91,7 +94,8 @@ function films_package_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'field_collection_item-field_film_showtimes-field_ticket_link'
+  // Exported field_instance:
+  // 'field_collection_item-field_film_showtimes-field_ticket_link'.
   $field_instances['field_collection_item-field_film_showtimes-field_ticket_link'] = array(
     'bundle' => 'field_film_showtimes',
     'default_value' => NULL,
@@ -111,6 +115,7 @@ function films_package_field_default_field_instances() {
     'label' => 'Ticket Link',
     'required' => 0,
     'settings' => array(
+      'absolute_url' => 1,
       'attributes' => array(
         'class' => '',
         'configurable_title' => 0,
@@ -124,6 +129,7 @@ function films_package_field_default_field_instances() {
       'enable_tokens' => 1,
       'rel_remove' => 'default',
       'title' => 'none',
+      'title_label_use_field_label' => FALSE,
       'title_maxlength' => 128,
       'title_value' => '',
       'url' => 'optional',
@@ -139,7 +145,7 @@ function films_package_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-film-field_body'
+  // Exported field_instance: 'node-film-field_body'.
   $field_instances['node-film-field_body'] = array(
     'bundle' => 'film',
     'default_value' => NULL,
@@ -179,7 +185,7 @@ function films_package_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-film-field_film_showtimes'
+  // Exported field_instance: 'node-film-field_film_showtimes'.
   $field_instances['node-film-field_film_showtimes'] = array(
     'bundle' => 'film',
     'default_value' => NULL,
@@ -209,13 +215,15 @@ function films_package_field_default_field_instances() {
     'widget' => array(
       'active' => 0,
       'module' => 'field_collection_table',
-      'settings' => array(),
+      'settings' => array(
+        'nodragging' => FALSE,
+      ),
       'type' => 'field_collection_table',
       'weight' => 5,
     ),
   );
 
-  // Exported field_instance: 'node-film-field_image'
+  // Exported field_instance: 'node-film-field_image'.
   $field_instances['node-film-field_image'] = array(
     'bundle' => 'film',
     'deleted' => 0,
@@ -265,7 +273,7 @@ function films_package_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-film-field_poster'
+  // Exported field_instance: 'node-film-field_poster'.
   $field_instances['node-film-field_poster'] = array(
     'bundle' => 'film',
     'deleted' => 0,
@@ -315,7 +323,7 @@ function films_package_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-film-field_run_date'
+  // Exported field_instance: 'node-film-field_run_date'.
   $field_instances['node-film-field_run_date'] = array(
     'bundle' => 'film',
     'deleted' => 0,
@@ -330,6 +338,7 @@ function films_package_field_default_field_instances() {
           'multiple_from' => '',
           'multiple_number' => '',
           'multiple_to' => '',
+          'show_remaining_days' => FALSE,
         ),
         'type' => 'date_default',
         'weight' => 2,
@@ -368,7 +377,7 @@ function films_package_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-film-field_summary'
+  // Exported field_instance: 'node-film-field_summary'.
   $field_instances['node-film-field_summary'] = array(
     'bundle' => 'film',
     'default_value' => NULL,
@@ -408,7 +417,7 @@ function films_package_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-film-field_tags'
+  // Exported field_instance: 'node-film-field_tags'.
   $field_instances['node-film-field_tags'] = array(
     'bundle' => 'film',
     'default_value' => NULL,
@@ -448,7 +457,7 @@ function films_package_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-film-field_trailer_url'
+  // Exported field_instance: 'node-film-field_trailer_url'.
   $field_instances['node-film-field_trailer_url'] = array(
     'bundle' => 'film',
     'default_value' => NULL,
@@ -487,7 +496,7 @@ function films_package_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-film_series-field_body'
+  // Exported field_instance: 'node-film_series-field_body'.
   $field_instances['node-film_series-field_body'] = array(
     'bundle' => 'film_series',
     'default_value' => NULL,
@@ -527,7 +536,7 @@ function films_package_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-film_series-field_film_reference'
+  // Exported field_instance: 'node-film_series-field_film_reference'.
   $field_instances['node-film_series-field_film_reference'] = array(
     'bundle' => 'film_series',
     'default_value' => NULL,
@@ -571,7 +580,7 @@ function films_package_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-film_series-field_image'
+  // Exported field_instance: 'node-film_series-field_image'.
   $field_instances['node-film_series-field_image'] = array(
     'bundle' => 'film_series',
     'deleted' => 0,
@@ -625,7 +634,7 @@ function films_package_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-film_series-field_series_span'
+  // Exported field_instance: 'node-film_series-field_series_span'.
   $field_instances['node-film_series-field_series_span'] = array(
     'bundle' => 'film_series',
     'deleted' => 0,
@@ -640,6 +649,7 @@ function films_package_field_default_field_instances() {
           'multiple_from' => '',
           'multiple_number' => '',
           'multiple_to' => '',
+          'show_remaining_days' => FALSE,
         ),
         'type' => 'date_default',
         'weight' => 1,
@@ -678,7 +688,7 @@ function films_package_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-film_series-field_summary'
+  // Exported field_instance: 'node-film_series-field_summary'.
   $field_instances['node-film_series-field_summary'] = array(
     'bundle' => 'film_series',
     'default_value' => NULL,

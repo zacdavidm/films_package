@@ -102,18 +102,8 @@ function films_package_views_default_views() {
   $handler->display->display_options['pager']['type'] = 'none';
   $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['defaults']['style_plugin'] = FALSE;
-  $handler->display->display_options['style_plugin'] = 'slick';
-  $handler->display->display_options['style_options']['optionset'] = 'filmslider';
-  $handler->display->display_options['style_options']['skin'] = 'default';
-  $handler->display->display_options['style_options']['slide_field_wrapper'] = 0;
-  $handler->display->display_options['style_options']['slide_caption'] = array(
-    'field_poster' => 0,
-    'title' => 0,
-  );
   $handler->display->display_options['defaults']['style_options'] = FALSE;
   $handler->display->display_options['defaults']['row_plugin'] = FALSE;
-  $handler->display->display_options['row_plugin'] = 'node';
-  $handler->display->display_options['row_options']['links'] = FALSE;
   $handler->display->display_options['defaults']['row_options'] = FALSE;
   $export['coming_soon'] = $view;
 
@@ -306,18 +296,8 @@ function films_package_views_default_views() {
   $handler->display->display_options['pager']['type'] = 'none';
   $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['defaults']['style_plugin'] = FALSE;
-  $handler->display->display_options['style_plugin'] = 'slick';
-  $handler->display->display_options['style_options']['optionset'] = 'filmslider';
-  $handler->display->display_options['style_options']['skin'] = 'default';
-  $handler->display->display_options['style_options']['slide_field_wrapper'] = 0;
-  $handler->display->display_options['style_options']['slide_caption'] = array(
-    'field_poster' => 0,
-    'title' => 0,
-  );
   $handler->display->display_options['defaults']['style_options'] = FALSE;
   $handler->display->display_options['defaults']['row_plugin'] = FALSE;
-  $handler->display->display_options['row_plugin'] = 'node';
-  $handler->display->display_options['row_options']['links'] = FALSE;
   $handler->display->display_options['defaults']['row_options'] = FALSE;
 
   /* Display: Now Playing */
